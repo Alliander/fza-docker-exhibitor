@@ -5,7 +5,7 @@ FROM maven:3.6.0-jdk-8-alpine as builder
 
 WORKDIR /tmp
 
-RUN wget https://raw.githubusercontent.com/soabase/exhibitor/master/exhibitor-standalone/src/main/resources/buildscripts/standalone/maven/pom.xml
+RUN wget https://raw.githubusercontent.com/soabase/exhibitor/exhibitor-1.7.1/exhibitor-standalone/src/main/resources/buildscripts/standalone/maven/pom.xml
 RUN mvn clean generate-sources package
 
 WORKDIR /tmp/target
